@@ -2,7 +2,6 @@ com.android.ide.eclipse.adt.autoPickTarget=false
 com.android.ide.eclipse.adt.fixLegacyEditors=1
 com.android.ide.eclipse.adt.palette=SMALL_PREVIEW
 com.android.ide.eclipse.adt.sdk=C\:\\Program Files\\Android\\sdk
-com.android.ide.eclipse.adt.xmlEditor=true
 design.palette.flyout.width=150
 design.structure.flyout.width=297
 eclipse.preferences.version=1

@@ -6,7 +6,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.database.LoginActivity" >
+    tools:context="com.example.database.LoginActivity" 
+    android:background="#5000aabb">
 
     <EditText
         android:id="@+id/editUser"
@@ -47,11 +48,11 @@
     <Button
         android:id="@+id/button1"
         android:layout_below="@+id/editPass"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="26dp"
-        android:background="#700000ff"
+        android:background="#7000ff00"
         android:text="Log in"
         android:onClick="loginUser"
         android:textColor="#ffffff" />

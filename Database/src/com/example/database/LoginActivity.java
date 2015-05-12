@@ -31,6 +31,7 @@ public class LoginActivity extends ActionBarActivity {
 		pass=password.getText().toString();
 		
 				if(user.contains("@")&&user.contains(".")&&pass.equals(pas)){
+					//startActivity(new Intent(getApplicationContext(),ProfileActivity.class));
 			Toast.makeText(getApplicationContext(), "please inserted values", Toast.LENGTH_SHORT).show();
 		}
 		else

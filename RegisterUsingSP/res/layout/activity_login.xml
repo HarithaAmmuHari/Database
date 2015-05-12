@@ -14,7 +14,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="15dp"
-        android:ems="10" >
+        android:ems="10"
+        android:hint="Username" >
 
         <requestFocus />
     </EditText>
@@ -26,17 +27,8 @@
         android:layout_below="@+id/editText1"
         android:layout_marginTop="15dp"
         android:ems="10"
+        android:hint="Password"
         android:inputType="textPassword" />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/editText2"
-        android:layout_marginTop="15dp"
-        android:onClick="loginTrial"
-        android:text="Button" />
 
     <Button
         android:id="@+id/button2"
@@ -45,5 +37,17 @@
         android:layout_alignParentBottom="true"
         android:onClick="showRegisterActivity"
         android:text="Register" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+
+        android:layout_below="@+id/editText2"
+        android:layout_marginRight="86dp"
+        android:layout_marginTop="22dp"
+        android:onClick="loginTrial"
+        android:text="Login" />
 
 </RelativeLayout>

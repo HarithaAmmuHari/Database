@@ -2,7 +2,10 @@ package com.example.app;
 
 import android.support.v7.app.ActionBarActivity;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.Editor;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,10 +27,32 @@ String mail =email.getText().toString();
 String pss =pass.getText().toString();
 
 if(mail .contains("@")&&mail .contains(".")){
-startActivity(new Intent(getApplicationContext(),MainActivity.class));
+	Toast.makeText(getApplicationContext(), "insert values", Toast.LENGTH_SHORT).show();
+	}
+else{
 	Toast.makeText(getApplicationContext(), "please inserted values", Toast.LENGTH_SHORT).show();
+
+}
+startActivity(new Intent(getApplicationContext(),HomepageActivity.class));
+Editor ed=PreferenceManager.getDefaultSharedPreferences(getApplicationContext()).edit();
+ed.putString("email", mail);
+ed.putString("pass", pss);
+ed.commit();
+SharedPreferences sp=PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+String em=sp.getString("email", "null");
+String ps=sp.getString("pass", "null");
+
+Toast.makeText(getApplicationContext(), "email"+em+"pass"+ps, Toast.LENGTH_SHORT).show();
 	}
+	public void createAccount(View v) {
+		startActivity(new Intent(getApplicationContext(),CreateActivity.class));
 	}
+	public void cancel(View v) {
+		startActivity(new Intent(getApplicationContext(),MainActivity.class));
+		Toast.makeText(getApplicationContext(), "cancel", Toast.LENGTH_SHORT).show();
+		finish();
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
